@@ -18,3 +18,7 @@ where specific grape varietals thrive
 In the future I would love to implement other tradition influences on wine-making
 as a searchable function (amphora usage, kvevri fermentation, as well as
 amaro, aromatized high sugar content wines) within the tags for more historical patterns.
+
+## wireframe:
+
+![grape-prosperity wireframe](./assets/wireframe/Screenshot%202023-01-12%20at%209.29.24%20PM.png)
