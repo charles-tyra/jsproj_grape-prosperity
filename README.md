@@ -38,7 +38,7 @@ is well suited to grow within a specific region.
 ### .information.
 * use APIs to fetch information such as soil-type, annual rainfail, cloud cover, temperature ranges, and more to interact and see what helps make specific grapes thrive in each region.
 
-### addition project details:
+### .addition project details.
 * a thorough introduction to the base knowledge to know what you're currently interacting with!
 * this lovely README
 
