@@ -9,3 +9,14 @@
 #root {
   color: purple;
 }
+
+div#main {
+  display: flex;
+  border: 10px;
+  width: 798px;
+  height: 598px;
+}
+
+#grape-info {
+  flex: auto;
+}

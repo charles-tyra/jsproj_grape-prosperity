@@ -1,10 +1,27 @@
-import Example from './scripts/example.js'
-var ee = require('@google/earthengine');
+// Require client library and private key.
+const ee = require('@google/earthengine');
+const privateKey = require('../grape-prosperity-2dcd1d44c0bb.json');
+
+// Initialize client library and run analysis.
+const runAnalysis = function () {
+   ee.initialize(null, null, function () {
+      // ... run analysis ...
+   }, function (e) {
+      console.error('Initialization error: ' + e);
+   });
+};
 
 document.addEventListener('DOMContentLoaded', () => {
    const root = document.querySelector('#root')
 
-   new Example(root);
+   ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
+      console.error('Authentication error: ' + e);
+   });
+
+   var image = new ee.Image('srtm90_v4');
+   image.getMap({ min: 0, max: 1000 }, function (map) {
+      console.log(map);
+   });
 
    // initialize google earth stuff
 
