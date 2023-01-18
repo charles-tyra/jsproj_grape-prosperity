@@ -1,6 +1,7 @@
 // Require client library and private key.
+// const Auth = require('./scripts/auth.js');
 const ee = require('@google/earthengine');
-const Auth = require('./scripts/auth.js');
+
 
 // ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
 //    console.error('Authentication error: ' + e);
@@ -8,8 +9,22 @@ const Auth = require('./scripts/auth.js');
 
 document.addEventListener('DOMContentLoaded', () => {
    console.log('before init');
-   
-   new Auth(ee);
+
+   // Initialize client library and run analysis.
+   var initialize = function () {
+      ee.initialize(null, null, function () {
+         // ... run analysis ...
+      }, function (e) {
+         console.error('Initialization error: ' + e);
+      });
+   };
+
+   // Authenticate using an OAuth pop-up.
+   ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com', initialize, function (e) {
+      console.error('Authentication error: ' + e);
+   }, null, function () {
+      ee.data.authenticateViaPopup(initialize);
+   });
 
    console.log('after init');
 

@@ -1,6 +1,8 @@
+
 class Auth {
    constructor(ee) {
       this.ee = ee;
+      // Specific use for Client-side Auth, use of OAuth v2.0
       this.authOAuth();
 
       // Specific use for Server-side Auth, use of private-key.json
@@ -9,14 +11,11 @@ class Auth {
 
    // authentication of OAuth v2.0 for client-side authorization
    authOAuth() {
-      const clientID = '714908911037 - v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com'
-
-
-      this.ee.data.authenticateViaOauth(clientID, initialize, function (e) {
-         console.error('Authentication error: ' + e);
-      }, null, function () {
-         ee.data.authenticateViaPopup(initialize);
-      });
+      // this.ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com', this.ee.initialize, function (e) {
+      //    console.error('Authentication error: ' + e);
+      // }, null, function () {
+      //    this.ee.data.authenticateViaPopup(initialize);
+      // });
    }
 
    // authentication of private-key for server-side authorization
