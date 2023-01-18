@@ -1,31 +1,25 @@
 // Require client library and private key.
-// const Auth = require('./scripts/auth.js');
-const ee = require('../node_modules/@google/earthengine');
+const Auth = require('./scripts/auth.js');
+var ee = require('../node_modules/@google/earthengine');
 
 // ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
 //    console.error('Authentication error: ' + e);
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-   console.log(window.location.href);
 
+// Auth initialization -- focusing on html and css then coming back
    // Initialize client library.
+   // console.log('before auth');
    // new Auth(ee);
-
+   // console.log('after auth');
 
    // ee.initialize();
-   console.log('before auth');
-   ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com');
+   // console.log('after init')
 
-   console.log('after auth');
-   ee.initialize();
-   console.log('after init')
    // Run an Earth Engine script.
-   var image = new ee.Image('srtm90_v4');
-   image.getMap({ min: 0, max: 1000 }, function (map) {
-      console.log(map);
-   });
-
-   // confirm push
-
+   // var image = new ee.Image('srtm90_v4');
+   // image.getMap({ min: 0, max: 1000 }, function (map) {
+   //    console.log(map);
+   // });
 })
