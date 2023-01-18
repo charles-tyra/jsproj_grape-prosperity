@@ -3,10 +3,10 @@ class Auth {
    constructor(ee) {
       this.ee = ee;
       // Specific use for Client-side Auth, use of OAuth v2.0
-      // this.authOAuth();
+      this.authOAuth();
 
       // Specific use for Server-side Auth, use of private-key.json
-      this.authPrivateKey();
+      // this.authPrivateKey();
    }
 
    // authentication of OAuth v2.0 for client-side authorization
