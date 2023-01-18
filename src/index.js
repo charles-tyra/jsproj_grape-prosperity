@@ -1,5 +1,5 @@
 // Require client library and private key.
-// const Auth = require('./scripts/auth.js');
+const Auth = require('./scripts/auth.js');
 const ee = require('../node_modules/@google/earthengine');
 
 
@@ -10,11 +10,10 @@ const ee = require('../node_modules/@google/earthengine');
 document.addEventListener('DOMContentLoaded', () => {
    console.log(window.location.href);
 
+   // Initialize client library.
+   new Auth(ee);
 
-   // Initialize client library and run analysis.
-   ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com');
-
-   console.log(ee);
+   console.log('after auth');
 
    ee.initialize();
 
