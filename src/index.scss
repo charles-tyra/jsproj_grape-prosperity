@@ -1,18 +1,18 @@
-@import "./styles/example.scss";
-
-#root {
-   color: purple;
+body {
+   
 }
 
 div#main  {
-   box-sizing: border-box;
-   border: 10px;
-   width: 798px;
-   height: 598px;
+   position: absolute;
+      box-sizing: border-box;
+      width: 840px;
+      height: 630px;
+      border: 20px solid #969696;
+      background: #d9dbda;
+      margin: 10px;
 }
 
+
 #grape-info {
-   
-   border: 20px;
-   
+
 }
