@@ -8,7 +8,7 @@ const ee = require('../node_modules/@google/earthengine');
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-   console.log(ee);
+   console.log(window.location.href);
 
 
    // Initialize client library and run analysis.
