@@ -11,11 +11,11 @@ class Auth {
 
    // authentication of OAuth v2.0 for client-side authorization
    authOAuth() {
-      // this.ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com', this.ee.initialize, function (e) {
-      //    console.error('Authentication error: ' + e);
-      // }, null, function () {
-      //    this.ee.data.authenticateViaPopup(initialize);
-      // });
+      this.ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com', this.ee.initialize, function (e) {
+         console.error('Authentication error: ' + e);
+      }, null, function () {
+         this.ee.data.authenticateViaPopup(initialize);
+      });
    }
 
    // authentication of private-key for server-side authorization
