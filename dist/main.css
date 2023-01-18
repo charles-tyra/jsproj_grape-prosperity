@@ -9,50 +9,61 @@ body {
 div#main {
   position: absolute;
   box-sizing: border-box;
-  width: 840px;
-  height: 480px;
+  width: 750px;
+  height: 403px;
   border: 1px solid black;
-  margin: 10px;
+  top: 4px;
 }
 
 div#realheader {
   position: relative;
   height: 0px;
-  font-size: xx-small;
-  top: 4px;
+  font-size: x-small;
+  top: px;
   left: 10px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-variant: small-caps;
 }
 
 h1#backer {
   position: relative;
   box-sizing: border-box;
-  width: 617px;
-  height: 34px;
+  width: 600px;
+  height: 40px;
   border: 1px solid #260130;
-  margin: 10px;
-  left: 10px;
-  top: 14px;
+  bottom: 10px;
+  left: 6px;
 }
 
-h2#text {
+h2#headertext {
   position: relative;
   height: 36px;
-  margin: 10px;
-  bottom: 66px;
-  font-size: 70px;
-  font-family: "Gill Sans";
-  font-weight: 200;
+  bottom: 93px;
+  left: 4px;
+  font-size: 36px;
+  font-weight: 100;
+  font-family: "Times New Roman";
 }
 
 #grape-info {
   position: relative;
   box-sizing: border-box;
-  width: 158px;
-  height: 400px;
-  border: 3px solid #260130;
+  width: 128px;
+  height: 380px;
+  border: 1px solid #260130;
+  background-color: white;
   margin: 10px;
-  left: 660px;
+  bottom: 36px;
+  left: 607px;
+  bottom: 126px;
+}
+
+#map {
+  position: relative;
+  box-sizing: border-box;
+  width: 600px;
+  height: 327px;
+  border: 1px solid #260130;
+  bottom: 472px;
+  right: 1px;
 }
