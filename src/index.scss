@@ -5,13 +5,14 @@
 }
 
 div#main  {
-   display: flex;
+   box-sizing: border-box;
    border: 10px;
    width: 798px;
    height: 598px;
 }
 
 #grape-info {
-   flex: auto;
-
+   
+   border: 20px;
+   
 }

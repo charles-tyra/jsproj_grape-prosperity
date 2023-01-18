@@ -1,22 +1,17 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-#root > h1 {
-  border: 4px solid purple;
-  padding: 20px;
-}
-
 #root {
   color: purple;
 }
 
 div#main {
-  display: flex;
+  box-sizing: border-box;
   border: 10px;
   width: 798px;
   height: 598px;
 }
 
 #grape-info {
-  flex: auto;
+  border: 20px;
 }
