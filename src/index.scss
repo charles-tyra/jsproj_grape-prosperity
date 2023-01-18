@@ -42,6 +42,10 @@ h2#headertext {
    font-family: 'Times New Roman';
 }
 
+#github {
+   overflow: auto;
+}
+
 #grape-info {
    position: relative;
    box-sizing: border-box;
@@ -54,6 +58,7 @@ h2#headertext {
    left: 607px;
    bottom: 126px;
 }
+
 
 #map {
    position: relative;
