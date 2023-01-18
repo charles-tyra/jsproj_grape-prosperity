@@ -1,4 +1,5 @@
 node_modules/
 .DS_Store
 notes
-grape-prosperity-2dcd1d44c0bb.json
+privatekey.json
+oauth.json

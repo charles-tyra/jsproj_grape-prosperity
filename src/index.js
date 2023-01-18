@@ -1,6 +1,6 @@
 // Require client library and private key.
 // const Auth = require('./scripts/auth.js');
-const ee = require('@google/earthengine');
+const ee = require('../node_modules/@google/earthengine');
 
 
 // ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
@@ -8,25 +8,15 @@ const ee = require('@google/earthengine');
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-   console.log('before init');
+   console.log(ee);
+
 
    // Initialize client library and run analysis.
-   var initialize = function () {
-      ee.initialize(null, null, function () {
-         // ... run analysis ...
-      }, function (e) {
-         console.error('Initialization error: ' + e);
-      });
-   };
+   ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com');
 
-   // Authenticate using an OAuth pop-up.
-   ee.data.authenticateViaOauth('714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com', initialize, function (e) {
-      console.error('Authentication error: ' + e);
-   }, null, function () {
-      ee.data.authenticateViaPopup(initialize);
-   });
+   console.log(ee);
 
-   console.log('after init');
+   ee.initialize();
 
    // Run an Earth Engine script.
    var image = new ee.Image('srtm90_v4');
