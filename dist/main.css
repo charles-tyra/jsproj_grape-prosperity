@@ -16,7 +16,7 @@ div#main {
 }
 
 div#realheader {
-  position: relative;
+  position: static;
   height: 0px;
   font-size: x-small;
   top: px;
@@ -46,7 +46,9 @@ h2#headertext {
 }
 
 #github {
-  overflow: auto;
+  position: relative;
+  left: 357px;
+  bottom: px;
 }
 
 #grape-info {
