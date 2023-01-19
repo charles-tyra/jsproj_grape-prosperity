@@ -5,8 +5,8 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <!-- <meta name="google-signin-client_id" content="714908911037-v3hbclsdn48e4dcvkk72jemktuh7q0h9.apps.googleusercontent.com"> -->
-   <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT0i15qVBYFv9vvNcKrLY8Qfg5AAb2K8Y"></script>
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
    <link rel="stylesheet" href="./dist/main.css" />
    <script src="./dist/main.js"></script>
    <title>Project Name</title>
@@ -17,22 +17,46 @@
    
       <div id="realheader">(grape prosperity)</div>
       <h1 id="backer"></h1>
-      <h2 id="headertext">the influence of climate on grapes</h2>
+      <h2 id="headertext">the influence of climate on grapes
+          <p>or the social influence of grapes and where they're from</p>
+      </h2>
       
       <div id="grape-info">
          <h3>region</h3>
          <img src="" alt="" width="100">
          <div>texy</div>
       </div>
-      <div id="map">
-         <!-- <img src="assets/map/map.png" alt="" width="550"> -->
-      </div>
+      <div id="map-container"></div>
    </div>
-   <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
    <a href="https://github.com/charles-tyra" id="github">
       <img src="assets/github/github-mark.png" alt="" width="23">
    </a>
-</body>
 
-   <img src="" alt="">
+   <script>
+      // Initializes Maps JavaScript API and adds an Earth Engine tile source to the map.
+      const initialize = (mapid) => {
+         // Get a reference to the placeholder DOM element to contain the map.
+         const mapContainerEl = document.getElementById("map-container");
+
+         // Create an interactive map inside the placeholder DOM element.
+         const embeddedMap = new google.maps.Map(mapContainerEl, {
+            // Pan and zoom initial map viewport to Grand Canyon.
+            center: { lng: -112.8598, lat: 36.2841 },
+            zoom: 9,
+         });
+
+         // Create a new tile source to fetch visible tiles on demand and displays them on the map.
+         const tileSource = new ee.layers.EarthEngineTileSource({
+            mapid,
+         });
+         const overlay = new ee.layers.ImageOverlay(tileSource);
+         embeddedMap.overlayMapTypes.push(overlay);
+      };
+
+      // Fetch a valid mapid from the remote web service defined in server.js.
+      fetch("/mapid")
+         .then((response) => response.text())
+         .then((mapid) => initialize(mapid));
+   </script>
+</body>
 </html>
