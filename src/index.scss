@@ -47,14 +47,11 @@ h2#headertext {
 }
 
 span#underheadertext {
-   width: 20px;
-   font-size: 23px;
-}
-
-#github {
+   display: block;
    position: relative;
-   left: 357px;
-   top: 37px;
+   left: 18px;
+   bottom: 10px;
+   font-size: 13px;
 }
 
 #grape-info-backer {
@@ -75,9 +72,13 @@ span#underheadertext {
    font-size: 14px;
    left: 8px;
    top: 4px;
-
 }
 
+#github {
+   position: relative;
+   left: 357px;
+   top: 37px;
+}
 
 #map-container {
    position: relative;
