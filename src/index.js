@@ -2,8 +2,9 @@
 const ee = require('@google/earthengine');
 const express = require('express');
 const privateKey = require('../privatekey.json');
-
 const port = process.env.PORT || 3000;
+
+console.log(ee);
 
 // Define endpoint at /mapid.
 const app = express().get('/mapid', (_, response) => {
@@ -37,6 +38,8 @@ Visit https://developers.google.com/earth-engine/service_account#how-do-i-create
 
 document.addEventListener('DOMContentLoaded', () => {
    // const root = document.getElementById('map')
+
+
 // Auth initialization -- focusing on html and css then coming back
    // Initialize client library.
    // console.log('before auth');
