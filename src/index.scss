@@ -46,13 +46,18 @@ h2#headertext {
    font-family: 'Times New Roman';
 }
 
+span#underheadertext {
+   width: 20px;
+   font-size: 23px;
+}
+
 #github {
    position: relative;
    left: 357px;
    top: 37px;
 }
 
-#grape-info {
+#grape-info-backer {
    position: relative;
    box-sizing: border-box;
    width: 128px;
@@ -63,6 +68,14 @@ h2#headertext {
    bottom: 36px;
    left: 607px;
    bottom: 126px;
+}
+
+#grape-header {
+   position: relative;
+   font-size: 14px;
+   left: 8px;
+   top: 4px;
+
 }
 
 

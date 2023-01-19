@@ -9,7 +9,8 @@
    <script src="https://apis.google.com/js/platform.js" async defer></script>
    <link rel="stylesheet" href="./dist/main.css" />
    <script src="./dist/main.js"></script>
-   <title>Project Name</title>
+   <title>grape prosperity</title>
+   <link rel="icon" type="image/x-icon" href="/assets/favicon/grape.ico">
 </head>
 
 <body>
@@ -18,13 +19,13 @@
       <div id="realheader">(grape prosperity)</div>
       <h1 id="backer"></h1>
       <h2 id="headertext">the influence of climate on grapes
-          <p>or the social influence of grapes and where they're from</p>
+          <span id="underheadertext">or the social influence of grapes and where they're from</span>
       </h2>
       
-      <div id="grape-info">
-         <h3>region</h3>
+      <div id="grape-info-backer">
+         <div id="grape-header">region</div>
          <img src="" alt="" width="100">
-         <div>texy</div>
+         <div id="grape-text">texy</div>
       </div>
       <div id="map-container"></div>
    </div>
@@ -32,17 +33,17 @@
       <img src="assets/github/github-mark.png" alt="" width="23">
    </a>
 
+   <!-- given script to get maps API to work from demo -->
    <script>
       // Initializes Maps JavaScript API and adds an Earth Engine tile source to the map.
       const initialize = (mapid) => {
-         // Get a reference to the placeholder DOM element to contain the map.
          const mapContainerEl = document.getElementById("map-container");
 
          // Create an interactive map inside the placeholder DOM element.
          const embeddedMap = new google.maps.Map(mapContainerEl, {
             // Pan and zoom initial map viewport to Grand Canyon.
-            center: { lng: -112.8598, lat: 36.2841 },
-            zoom: 9,
+            center: { lng: 42.071334, lat: 45.483567 },
+            zoom: 11,
          });
 
          // Create a new tile source to fetch visible tiles on demand and displays them on the map.
